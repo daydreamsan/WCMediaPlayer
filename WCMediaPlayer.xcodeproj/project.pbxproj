@@ -371,12 +371,14 @@
 				"${BUILT_PRODUCTS_DIR}/FreeStreamer/FreeStreamer.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreeStreamer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -552,10 +554,7 @@
 				DEVELOPMENT_TEAM = PPZK6W8C64;
 				INFOPLIST_FILE = WCMediaPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.bang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,10 +570,7 @@
 				DEVELOPMENT_TEAM = PPZK6W8C64;
 				INFOPLIST_FILE = WCMediaPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.bang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -3,22 +3,28 @@ PODS:
     - Reachability (~> 3.0)
   - Masonry (1.1.0)
   - Reachability (3.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - FreeStreamer (~> 3.8.3)
   - Masonry (~> 1.1.0)
+  - YYKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - FreeStreamer
     - Masonry
     - Reachability
+    - YYKit
 
 SPEC CHECKSUMS:
   FreeStreamer: b205b0bf6a2e7855f935369145498f930eb27cac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e5212544da5f64e8a09e5fdf641b0df8ebcaf464
+PODFILE CHECKSUM: 57f649d14730762b51ee2f9b5112e7a74921efcf
 
 COCOAPODS: 1.5.0
