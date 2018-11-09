@@ -7,15 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70F13EB8D4EA72FADA730E8 /* Pods_WCMediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18B2D7BCC55420642BD8193 /* Pods_WCMediaPlayer.framework */; };
+		F338D5FE21904F88008608FE /* 背景6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F421904F85008608FE /* 背景6.jpg */; };
+		F338D5FF21904F88008608FE /* 背景3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F521904F86008608FE /* 背景3.jpg */; };
+		F338D60021904F88008608FE /* 背景7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F621904F86008608FE /* 背景7.jpg */; };
+		F338D60121904F88008608FE /* 背景8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F721904F86008608FE /* 背景8.jpg */; };
+		F338D60221904F88008608FE /* 背景0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F821904F87008608FE /* 背景0.jpg */; };
+		F338D60321904F88008608FE /* 背景5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5F921904F87008608FE /* 背景5.jpg */; };
+		F338D60421904F88008608FE /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5FA21904F87008608FE /* 背景2.jpg */; };
+		F338D60521904F88008608FE /* 背景9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5FB21904F87008608FE /* 背景9.jpg */; };
+		F338D60621904F88008608FE /* 背景4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5FC21904F88008608FE /* 背景4.jpg */; };
+		F338D60721904F88008608FE /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F338D5FD21904F88008608FE /* 背景1.jpg */; };
+		F33F2E70219414FA007B5615 /* QTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F2E6F219414FA007B5615 /* QTSplashView.m */; };
+		F33F2E782194286B007B5615 /* QTCarveLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F2E772194286B007B5615 /* QTCarveLabel.m */; };
+		F33F2E7B219438BB007B5615 /* QTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F2E7A219438BB007B5615 /* QTButton.m */; };
 		F351D063219008F000E883EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F351D062219008F000E883EE /* AppDelegate.m */; };
 		F351D066219008F000E883EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F351D065219008F000E883EE /* ViewController.m */; };
 		F351D069219008F000E883EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F351D067219008F000E883EE /* Main.storyboard */; };
 		F351D06B219008F000E883EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F351D06A219008F000E883EE /* Assets.xcassets */; };
 		F351D06E219008F000E883EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F351D06C219008F000E883EE /* LaunchScreen.storyboard */; };
 		F351D071219008F000E883EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F351D070219008F000E883EE /* main.m */; };
+		F351D07A21901DF200E883EE /* QTMediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F351D07921901DF200E883EE /* QTMediaPlayer.m */; };
+		F355B96A21927DBB00A968AF /* QTMediaRemoteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F355B96921927DBB00A968AF /* QTMediaRemoteHandler.m */; };
+		F355B9752192A82F00A968AF /* 背景3-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B96B2192A82E00A968AF /* 背景3-small.jpg */; };
+		F355B9762192A82F00A968AF /* 背景5-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B96C2192A82E00A968AF /* 背景5-small.jpg */; };
+		F355B9772192A82F00A968AF /* 背景9-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B96D2192A82F00A968AF /* 背景9-small.jpg */; };
+		F355B9782192A82F00A968AF /* 背景0-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B96E2192A82F00A968AF /* 背景0-small.jpg */; };
+		F355B9792192A82F00A968AF /* 背景4-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B96F2192A82F00A968AF /* 背景4-small.jpg */; };
+		F355B97A2192A82F00A968AF /* 背景1-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B9702192A82F00A968AF /* 背景1-small.jpg */; };
+		F355B97B2192A82F00A968AF /* 背景2-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B9712192A82F00A968AF /* 背景2-small.jpg */; };
+		F355B97C2192A82F00A968AF /* 背景6-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B9722192A82F00A968AF /* 背景6-small.jpg */; };
+		F355B97D2192A82F00A968AF /* 背景8-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B9732192A82F00A968AF /* 背景8-small.jpg */; };
+		F355B97E2192A82F00A968AF /* 背景7-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F355B9742192A82F00A968AF /* 背景7-small.jpg */; };
+		F355B9812192AC1700A968AF /* QTAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F355B9802192AC1700A968AF /* QTAutoScrollLabel.m */; };
+		F355B9842192DC9A00A968AF /* QTShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F355B9832192DC9A00A968AF /* QTShadowView.m */; };
+		F355B9872192DF5600A968AF /* QTMediaListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F355B9862192DF5600A968AF /* QTMediaListView.m */; };
+		F360CE4E2195161D005B8DAD /* QTScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F360CE4D2195161D005B8DAD /* QTScrollLabel.m */; };
+		F360CE512195368D005B8DAD /* QTImageFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F360CE502195368D005B8DAD /* QTImageFlowView.m */; };
+		F367D9F321912B0C00BF92B7 /* QTSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F367D9F221912B0C00BF92B7 /* QTSlider.m */; };
+		F367D9F621918B8500BF92B7 /* QTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F367D9F521918B8500BF92B7 /* QTTableViewController.m */; };
+		F367D9F921918C0C00BF92B7 /* QTMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F367D9F821918C0C00BF92B7 /* QTMediaCell.m */; };
+		F39B450B21940E480071BDA6 /* s1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F39B450A21940E480071BDA6 /* s1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68C0F1D60543AAE7657D8A0E /* Pods-WCMediaPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCMediaPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCMediaPlayer/Pods-WCMediaPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		A18B2D7BCC55420642BD8193 /* Pods_WCMediaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCMediaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E4B3BD4953530F9D565112 /* Pods-WCMediaPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCMediaPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCMediaPlayer/Pods-WCMediaPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		F338D5F421904F85008608FE /* 背景6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景6.jpg"; sourceTree = "<group>"; };
+		F338D5F521904F86008608FE /* 背景3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景3.jpg"; sourceTree = "<group>"; };
+		F338D5F621904F86008608FE /* 背景7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景7.jpg"; sourceTree = "<group>"; };
+		F338D5F721904F86008608FE /* 背景8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景8.jpg"; sourceTree = "<group>"; };
+		F338D5F821904F87008608FE /* 背景0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景0.jpg"; sourceTree = "<group>"; };
+		F338D5F921904F87008608FE /* 背景5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景5.jpg"; sourceTree = "<group>"; };
+		F338D5FA21904F87008608FE /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
+		F338D5FB21904F87008608FE /* 背景9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景9.jpg"; sourceTree = "<group>"; };
+		F338D5FC21904F88008608FE /* 背景4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景4.jpg"; sourceTree = "<group>"; };
+		F338D5FD21904F88008608FE /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
+		F33F2E6E219414FA007B5615 /* QTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTSplashView.h; sourceTree = "<group>"; };
+		F33F2E6F219414FA007B5615 /* QTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTSplashView.m; sourceTree = "<group>"; };
+		F33F2E762194286B007B5615 /* QTCarveLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTCarveLabel.h; sourceTree = "<group>"; };
+		F33F2E772194286B007B5615 /* QTCarveLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTCarveLabel.m; sourceTree = "<group>"; };
+		F33F2E79219438BB007B5615 /* QTButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTButton.h; sourceTree = "<group>"; };
+		F33F2E7A219438BB007B5615 /* QTButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTButton.m; sourceTree = "<group>"; };
 		F351D05E219008F000E883EE /* WCMediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCMediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F351D061219008F000E883EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F351D062219008F000E883EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +80,38 @@
 		F351D06D219008F000E883EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F351D06F219008F000E883EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F351D070219008F000E883EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F351D07821901DF200E883EE /* QTMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMediaPlayer.h; sourceTree = "<group>"; };
+		F351D07921901DF200E883EE /* QTMediaPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMediaPlayer.m; sourceTree = "<group>"; };
+		F355B96721927BA400A968AF /* QTPlayerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTPlayerInterface.h; sourceTree = "<group>"; };
+		F355B96821927DBB00A968AF /* QTMediaRemoteHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMediaRemoteHandler.h; sourceTree = "<group>"; };
+		F355B96921927DBB00A968AF /* QTMediaRemoteHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMediaRemoteHandler.m; sourceTree = "<group>"; };
+		F355B96B2192A82E00A968AF /* 背景3-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景3-small.jpg"; sourceTree = "<group>"; };
+		F355B96C2192A82E00A968AF /* 背景5-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景5-small.jpg"; sourceTree = "<group>"; };
+		F355B96D2192A82F00A968AF /* 背景9-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景9-small.jpg"; sourceTree = "<group>"; };
+		F355B96E2192A82F00A968AF /* 背景0-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景0-small.jpg"; sourceTree = "<group>"; };
+		F355B96F2192A82F00A968AF /* 背景4-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景4-small.jpg"; sourceTree = "<group>"; };
+		F355B9702192A82F00A968AF /* 背景1-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1-small.jpg"; sourceTree = "<group>"; };
+		F355B9712192A82F00A968AF /* 背景2-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2-small.jpg"; sourceTree = "<group>"; };
+		F355B9722192A82F00A968AF /* 背景6-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景6-small.jpg"; sourceTree = "<group>"; };
+		F355B9732192A82F00A968AF /* 背景8-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景8-small.jpg"; sourceTree = "<group>"; };
+		F355B9742192A82F00A968AF /* 背景7-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景7-small.jpg"; sourceTree = "<group>"; };
+		F355B97F2192AC1700A968AF /* QTAutoScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTAutoScrollLabel.h; sourceTree = "<group>"; };
+		F355B9802192AC1700A968AF /* QTAutoScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTAutoScrollLabel.m; sourceTree = "<group>"; };
+		F355B9822192DC9A00A968AF /* QTShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTShadowView.h; sourceTree = "<group>"; };
+		F355B9832192DC9A00A968AF /* QTShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTShadowView.m; sourceTree = "<group>"; };
+		F355B9852192DF5600A968AF /* QTMediaListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMediaListView.h; sourceTree = "<group>"; };
+		F355B9862192DF5600A968AF /* QTMediaListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMediaListView.m; sourceTree = "<group>"; };
+		F360CE4C2195161D005B8DAD /* QTScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTScrollLabel.h; sourceTree = "<group>"; };
+		F360CE4D2195161D005B8DAD /* QTScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTScrollLabel.m; sourceTree = "<group>"; };
+		F360CE4F2195368D005B8DAD /* QTImageFlowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTImageFlowView.h; sourceTree = "<group>"; };
+		F360CE502195368D005B8DAD /* QTImageFlowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTImageFlowView.m; sourceTree = "<group>"; };
+		F367D9F121912B0C00BF92B7 /* QTSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTSlider.h; sourceTree = "<group>"; };
+		F367D9F221912B0C00BF92B7 /* QTSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTSlider.m; sourceTree = "<group>"; };
+		F367D9F421918B8500BF92B7 /* QTTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTTableViewController.h; sourceTree = "<group>"; };
+		F367D9F521918B8500BF92B7 /* QTTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTTableViewController.m; sourceTree = "<group>"; };
+		F367D9F721918C0C00BF92B7 /* QTMediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMediaCell.h; sourceTree = "<group>"; };
+		F367D9F821918C0C00BF92B7 /* QTMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMediaCell.m; sourceTree = "<group>"; };
+		F39B450A21940E480071BDA6 /* s1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = s1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +119,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F13EB8D4EA72FADA730E8 /* Pods_WCMediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40E42077E6970CEBD1F0BD13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68C0F1D60543AAE7657D8A0E /* Pods-WCMediaPlayer.debug.xcconfig */,
+				A8E4B3BD4953530F9D565112 /* Pods-WCMediaPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFF842815E27DD0CCDD714D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A18B2D7BCC55420642BD8193 /* Pods_WCMediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F338D5F321904F77008608FE /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				F39B450A21940E480071BDA6 /* s1.jpg */,
+				F355B96E2192A82F00A968AF /* 背景0-small.jpg */,
+				F355B9702192A82F00A968AF /* 背景1-small.jpg */,
+				F355B9712192A82F00A968AF /* 背景2-small.jpg */,
+				F355B96B2192A82E00A968AF /* 背景3-small.jpg */,
+				F355B96F2192A82F00A968AF /* 背景4-small.jpg */,
+				F355B96C2192A82E00A968AF /* 背景5-small.jpg */,
+				F355B9722192A82F00A968AF /* 背景6-small.jpg */,
+				F355B9742192A82F00A968AF /* 背景7-small.jpg */,
+				F355B9732192A82F00A968AF /* 背景8-small.jpg */,
+				F355B96D2192A82F00A968AF /* 背景9-small.jpg */,
+				F338D5F821904F87008608FE /* 背景0.jpg */,
+				F338D5FD21904F88008608FE /* 背景1.jpg */,
+				F338D5FA21904F87008608FE /* 背景2.jpg */,
+				F338D5F521904F86008608FE /* 背景3.jpg */,
+				F338D5FC21904F88008608FE /* 背景4.jpg */,
+				F338D5F921904F87008608FE /* 背景5.jpg */,
+				F338D5F421904F85008608FE /* 背景6.jpg */,
+				F338D5F621904F86008608FE /* 背景7.jpg */,
+				F338D5F721904F86008608FE /* 背景8.jpg */,
+				F338D5FB21904F87008608FE /* 背景9.jpg */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
 		F351D055219008F000E883EE = {
 			isa = PBXGroup;
 			children = (
 				F351D060219008F000E883EE /* WCMediaPlayer */,
 				F351D05F219008F000E883EE /* Products */,
+				40E42077E6970CEBD1F0BD13 /* Pods */,
+				DFF842815E27DD0CCDD714D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +192,24 @@
 		F351D060219008F000E883EE /* WCMediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F338D5F321904F77008608FE /* imgs */,
+				F351D07721901DB700E883EE /* Player */,
 				F351D061219008F000E883EE /* AppDelegate.h */,
 				F351D062219008F000E883EE /* AppDelegate.m */,
 				F351D064219008F000E883EE /* ViewController.h */,
 				F351D065219008F000E883EE /* ViewController.m */,
+				F367D9F421918B8500BF92B7 /* QTTableViewController.h */,
+				F367D9F521918B8500BF92B7 /* QTTableViewController.m */,
+				F367D9F721918C0C00BF92B7 /* QTMediaCell.h */,
+				F367D9F821918C0C00BF92B7 /* QTMediaCell.m */,
+				F33F2E6E219414FA007B5615 /* QTSplashView.h */,
+				F33F2E6F219414FA007B5615 /* QTSplashView.m */,
+				F33F2E762194286B007B5615 /* QTCarveLabel.h */,
+				F33F2E772194286B007B5615 /* QTCarveLabel.m */,
+				F360CE4C2195161D005B8DAD /* QTScrollLabel.h */,
+				F360CE4D2195161D005B8DAD /* QTScrollLabel.m */,
+				F360CE4F2195368D005B8DAD /* QTImageFlowView.h */,
+				F360CE502195368D005B8DAD /* QTImageFlowView.m */,
 				F351D067219008F000E883EE /* Main.storyboard */,
 				F351D06A219008F000E883EE /* Assets.xcassets */,
 				F351D06C219008F000E883EE /* LaunchScreen.storyboard */,
@@ -71,6 +219,36 @@
 			path = WCMediaPlayer;
 			sourceTree = "<group>";
 		};
+		F351D07721901DB700E883EE /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F367D9F021912AF900BF92B7 /* QTKit */,
+				F351D07821901DF200E883EE /* QTMediaPlayer.h */,
+				F351D07921901DF200E883EE /* QTMediaPlayer.m */,
+				F355B96721927BA400A968AF /* QTPlayerInterface.h */,
+				F355B96821927DBB00A968AF /* QTMediaRemoteHandler.h */,
+				F355B96921927DBB00A968AF /* QTMediaRemoteHandler.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		F367D9F021912AF900BF92B7 /* QTKit */ = {
+			isa = PBXGroup;
+			children = (
+				F367D9F121912B0C00BF92B7 /* QTSlider.h */,
+				F367D9F221912B0C00BF92B7 /* QTSlider.m */,
+				F355B97F2192AC1700A968AF /* QTAutoScrollLabel.h */,
+				F355B9802192AC1700A968AF /* QTAutoScrollLabel.m */,
+				F355B9822192DC9A00A968AF /* QTShadowView.h */,
+				F355B9832192DC9A00A968AF /* QTShadowView.m */,
+				F355B9852192DF5600A968AF /* QTMediaListView.h */,
+				F355B9862192DF5600A968AF /* QTMediaListView.m */,
+				F33F2E79219438BB007B5615 /* QTButton.h */,
+				F33F2E7A219438BB007B5615 /* QTButton.m */,
+			);
+			path = QTKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F351D074219008F000E883EE /* Build configuration list for PBXNativeTarget "WCMediaPlayer" */;
 			buildPhases = (
+				1EDADDDD0B8FE36242E4D6F6 /* [CP] Check Pods Manifest.lock */,
 				F351D05A219008F000E883EE /* Sources */,
 				F351D05B219008F000E883EE /* Frameworks */,
 				F351D05C219008F000E883EE /* Resources */,
+				F3FE3E13564FD48D6189DF1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +282,11 @@
 				TargetAttributes = {
 					F351D05D219008F000E883EE = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,21 +313,98 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F338D60521904F88008608FE /* 背景9.jpg in Resources */,
+				F355B97C2192A82F00A968AF /* 背景6-small.jpg in Resources */,
+				F355B9792192A82F00A968AF /* 背景4-small.jpg in Resources */,
+				F355B97D2192A82F00A968AF /* 背景8-small.jpg in Resources */,
+				F355B9762192A82F00A968AF /* 背景5-small.jpg in Resources */,
+				F338D60021904F88008608FE /* 背景7.jpg in Resources */,
+				F338D60221904F88008608FE /* 背景0.jpg in Resources */,
+				F355B9782192A82F00A968AF /* 背景0-small.jpg in Resources */,
+				F338D60121904F88008608FE /* 背景8.jpg in Resources */,
+				F39B450B21940E480071BDA6 /* s1.jpg in Resources */,
 				F351D06E219008F000E883EE /* LaunchScreen.storyboard in Resources */,
+				F355B9772192A82F00A968AF /* 背景9-small.jpg in Resources */,
+				F338D5FF21904F88008608FE /* 背景3.jpg in Resources */,
 				F351D06B219008F000E883EE /* Assets.xcassets in Resources */,
+				F338D60321904F88008608FE /* 背景5.jpg in Resources */,
+				F338D60721904F88008608FE /* 背景1.jpg in Resources */,
+				F338D60421904F88008608FE /* 背景2.jpg in Resources */,
+				F355B97E2192A82F00A968AF /* 背景7-small.jpg in Resources */,
+				F355B97A2192A82F00A968AF /* 背景1-small.jpg in Resources */,
+				F338D60621904F88008608FE /* 背景4.jpg in Resources */,
 				F351D069219008F000E883EE /* Main.storyboard in Resources */,
+				F355B9752192A82F00A968AF /* 背景3-small.jpg in Resources */,
+				F338D5FE21904F88008608FE /* 背景6.jpg in Resources */,
+				F355B97B2192A82F00A968AF /* 背景2-small.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EDADDDD0B8FE36242E4D6F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WCMediaPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3FE3E13564FD48D6189DF1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WCMediaPlayer/Pods-WCMediaPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FreeStreamer/FreeStreamer.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FreeStreamer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCMediaPlayer/Pods-WCMediaPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F351D05A219008F000E883EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F355B9812192AC1700A968AF /* QTAutoScrollLabel.m in Sources */,
+				F355B9842192DC9A00A968AF /* QTShadowView.m in Sources */,
+				F355B96A21927DBB00A968AF /* QTMediaRemoteHandler.m in Sources */,
+				F355B9872192DF5600A968AF /* QTMediaListView.m in Sources */,
+				F33F2E7B219438BB007B5615 /* QTButton.m in Sources */,
+				F33F2E70219414FA007B5615 /* QTSplashView.m in Sources */,
+				F33F2E782194286B007B5615 /* QTCarveLabel.m in Sources */,
+				F360CE512195368D005B8DAD /* QTImageFlowView.m in Sources */,
+				F351D07A21901DF200E883EE /* QTMediaPlayer.m in Sources */,
 				F351D066219008F000E883EE /* ViewController.m in Sources */,
+				F360CE4E2195161D005B8DAD /* QTScrollLabel.m in Sources */,
+				F367D9F921918C0C00BF92B7 /* QTMediaCell.m in Sources */,
+				F367D9F621918B8500BF92B7 /* QTTableViewController.m in Sources */,
 				F351D071219008F000E883EE /* main.m in Sources */,
+				F367D9F321912B0C00BF92B7 /* QTSlider.m in Sources */,
 				F351D063219008F000E883EE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,16 +545,18 @@
 		};
 		F351D075219008F000E883EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C0F1D60543AAE7657D8A0E /* Pods-WCMediaPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PPZK6W8C64;
 				INFOPLIST_FILE = WCMediaPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.WCMediaPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.bang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,16 +564,18 @@
 		};
 		F351D076219008F000E883EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8E4B3BD4953530F9D565112 /* Pods-WCMediaPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PPZK6W8C64;
 				INFOPLIST_FILE = WCMediaPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.WCMediaPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.ios.bang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
