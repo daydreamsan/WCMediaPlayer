@@ -28,7 +28,6 @@
 @property (nonatomic, copy  ) void (^didTapImageCallback)(NSIndexPath *idxpath, QTImageFlowViewCell *cell, QTImageCellItem *item);
 
 - (void)showInView:(UIView *)sview;
-- (void)dismiss;
 
 @end
 

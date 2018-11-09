@@ -69,10 +69,10 @@
 - (void)show {
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     [window addSubview:self];
-    self.sloganLabel.transform = CGAffineTransformMakeTranslation(0, 20);
+    self.sloganLabel.transform = CGAffineTransformMakeTranslation(0, 40);
     [UIView animateWithDuration:1 animations:^{
         self.gradientView.alpha = 1;
-        self.sloganLabel.alpha = 1;
+        self.sloganLabel.alpha = 0.8;
         self.sloganLabel.transform = CGAffineTransformMakeTranslation(0, 0);
     } completion:^(BOOL finished) {
         
@@ -87,7 +87,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:1.2 animations:^{
             self.alpha = 0;
-            self.imageView.transform = CGAffineTransformScale(self.imageView.transform, 10, 1);
+            self.imageView.transform = CGAffineTransformScale(self.imageView.transform, 3, 1);
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
         }];

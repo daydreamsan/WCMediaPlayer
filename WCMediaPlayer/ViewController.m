@@ -18,6 +18,8 @@
 #import "QTSplashView.h"
 #import "QTScrollLabel.h"
 #import "QTImageFlowView.h"
+#import <YYKit/YYKit.h>
+#import "WCPhotoGroupView.h"
 
 @interface ViewController ()
 
@@ -108,6 +110,21 @@
     QTImageFlowView *flow = [[QTImageFlowView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
     flow.layouts = [self imageCellItems];
     [flow showInView:self.view];
+    
+    @weakify(self)
+    flow.didTapImageCallback = ^(NSIndexPath *idxpath, QTImageFlowViewCell *cell, QTImageCellItem *item) {
+        @strongify(self)
+        NSMutableArray *tmp = @[].mutableCopy;
+        WCPhotoGroupItem *one = [WCPhotoGroupItem new];
+        one.image = item.image;
+        one.thumbView = cell;
+        one.largeImageSize = item.image.size;
+        [tmp addObject:one];
+        WCPhotoGroupView *groupView = [[WCPhotoGroupView alloc] initWithGroupItems:tmp];
+        [groupView presentFromImageView:cell toContainer:self.view animated:YES completion:^{
+            
+        }];
+    };
 }
 
 - (void)didTapPlayMode:(UIButton *)btn {
@@ -343,11 +360,12 @@
 
 - (NSArray<QTImageCellItem *> *)imageCellItems {
     NSMutableArray *tmp = @[].mutableCopy;
-    for (NSInteger i = 0; i < 10; i++) {
+    for (NSInteger i = 0; i < 20; i++) {
         NSString *name = [NSString stringWithFormat:@"背景%@-small.jpg", @(i)];
         QTImageCellItem *item = QTImageCellItem.new;
         item.image = [UIImage imageNamed:name];
         [tmp addObject:item];
+        NSLog(@"iname: %@", name);
     }
     return tmp;
 }
