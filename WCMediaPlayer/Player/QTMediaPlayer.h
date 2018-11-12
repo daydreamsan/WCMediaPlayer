@@ -132,6 +132,11 @@ typedef void(^QTMetaDataAvailableCallback)(QTMediaPlayer *player, NSDictionary *
  */
 @property (nonatomic, assign, readonly) QTMediaPosition duration;
 
+/**
+ 两个曲目之间的时间间隔, 以秒为单位. 默认为0
+ */
+@property (nonatomic, assign) NSTimeInterval gap;
+
 @property (nonatomic, copy  ) QTChangeStateCallback onChangeState;
 @property (nonatomic, copy  ) QTUpdateProgressCallback onUpdateProgress;
 @property (nonatomic, copy  ) QTUpdateIndexCallback onUpdateIndex;
@@ -177,6 +182,15 @@ typedef void(^QTMetaDataAvailableCallback)(QTMediaPlayer *player, NSDictionary *
 - (void)playNextItem;
 - (void)playPreviousItem;
 - (void)seekToPosition:(QTMediaPosition)position;
+
+/**
+ 当前是否在进行播放, NO-未播放， YES-正在播放
+ 此值使用真实的播放状态, 当播放状态为:QTMediaPlayerStatePlaying或QTMediaPlayerStateEndOfFile时
+ 表示在播放中, 否则，表示未进行播放.
+ 另外, 该方法不受`gap`属性的影响。例如:列表循环播放模式下gap=10时, 在上一曲播放结束后，会有10s的等待时间
+ 在这10s中的任何时候访问该方法，都会得到NO
+ @return 状态值
+ */
 - (BOOL)isPlaying;
 
 @end

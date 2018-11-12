@@ -36,6 +36,7 @@
 @property (nonatomic, assign) NSUInteger currentIndex;
 @property (nonatomic, strong) QTMediaItem *currentItem;
 @property (nonatomic, strong) NSDictionary *metaData;
+@property (nonatomic, assign) UIBackgroundTaskIdentifier token;
 
 @end
 
@@ -57,6 +58,7 @@
     if (self) {
         self.playlist = playlist;
         [self setupPrivPlayer];
+        [self setupObserver];
     }
     return self;
 }
@@ -93,12 +95,18 @@
     [self configAudioSession];
     [self.privPlayer play];
 }
+- (void)playWithIndexObj:(NSNumber *)idx {
+    NSUInteger index = idx.integerValue;
+    [self playWithIndex:index];
+}
 
 - (void)pause {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
     [self.privPlayer pause];
 }
 
 - (void)stop {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
     [self.privPlayer stop];
     [self invalidTimer];
 }
@@ -141,7 +149,11 @@
             break;
     }
     if (idx < self.playlist.count) {
-        [self playWithIndex:idx];
+        if (self.gap) {
+            [self performSelector:@selector(playWithIndexObj:) withObject:@(idx) afterDelay:self.gap];
+        } else {
+            [self playWithIndex:idx];
+        }
     }
 }
 
@@ -296,6 +308,11 @@
     }
 }
 
+- (void)setupObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveEnterBackgroundNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
 #pragma mark - Action
 - (void)timerDidFire:(NSTimer *)sender {
     FSStreamPosition position = self.privPlayer.activeStream.currentTimePlayed;
@@ -309,6 +326,22 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.onUpdateProgress(self, p);
         });
+    }
+}
+
+#pragma mark - Noti
+- (void)didReceiveEnterBackgroundNotification:(NSNotification *)noti {
+    self.token = [[UIApplication sharedApplication] beginBackgroundTaskWithName:@"qt_audio_background_task" expirationHandler:^{
+        if (self.token != UIBackgroundTaskInvalid) {
+            [[UIApplication sharedApplication] endBackgroundTask:self.token];
+            self.token = UIBackgroundTaskInvalid;
+        }
+    }];
+}
+- (void)didReceiveBecomeActiveNotification:(NSNotification *)noti {
+    if (self.token != UIBackgroundTaskInvalid) {
+        [[UIApplication sharedApplication] endBackgroundTask:self.token];
+        self.token = UIBackgroundTaskInvalid;
     }
 }
 

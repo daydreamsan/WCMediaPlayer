@@ -120,10 +120,10 @@
         one.thumbView = cell;
         one.largeImageSize = item.image.size;
         [tmp addObject:one];
-        WCPhotoGroupView *groupView = [[WCPhotoGroupView alloc] initWithGroupItems:tmp];
-        [groupView presentFromImageView:cell toContainer:self.view animated:YES completion:^{
-            
-        }];
+//        WCPhotoGroupView *groupView = [[WCPhotoGroupView alloc] initWithGroupItems:tmp];
+//        [groupView presentFromImageView:cell toContainer:self.view animated:YES completion:^{
+//
+//        }];
     };
 }
 
