@@ -42,6 +42,10 @@
 
 @implementation QTMediaPlayer
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)init {
     return [self initWithPlayList:nil];
 }
@@ -86,6 +90,7 @@
         self.privPlayer.activeStream.outputFile = item.outputFileURL;
     }
     [self.privPlayer.activeStream setStrictContentTypeChecking:NO];
+    self.privPlayer.activeStream.maxRetryCount = 0;
     NSInteger oldIndex = self.currentIndex;
     self.currentItem = item;
     self.currentIndex = idx;

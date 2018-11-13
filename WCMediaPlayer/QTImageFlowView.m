@@ -78,7 +78,7 @@
     if (!self->_timer) {
         self->_timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(timerDidFire:)];
         [self->_timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-        self->_timer.frameInterval = 4;
+        self->_timer.frameInterval = 2;
     }
 }
 

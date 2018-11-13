@@ -20,6 +20,8 @@
 #import "QTImageFlowView.h"
 #import <YYKit/YYKit.h>
 #import "WCPhotoGroupView.h"
+#import <WechatAuthSDK.h>
+#import <WXApi.h>
 
 @interface ViewController ()
 
@@ -110,7 +112,7 @@
     QTImageFlowView *flow = [[QTImageFlowView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
     flow.layouts = [self imageCellItems];
     [flow showInView:self.view];
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     @weakify(self)
     flow.didTapImageCallback = ^(NSIndexPath *idxpath, QTImageFlowViewCell *cell, QTImageCellItem *item) {
         @strongify(self)
@@ -120,10 +122,10 @@
         one.thumbView = cell;
         one.largeImageSize = item.image.size;
         [tmp addObject:one];
-//        WCPhotoGroupView *groupView = [[WCPhotoGroupView alloc] initWithGroupItems:tmp];
-//        [groupView presentFromImageView:cell toContainer:self.view animated:YES completion:^{
-//
-//        }];
+        WCPhotoGroupView *groupView = [[WCPhotoGroupView alloc] initWithGroupItems:tmp];
+        [groupView presentFromImageView:cell toContainer:self.view animated:YES completion:^{
+
+        }];
     };
 }
 
@@ -368,6 +370,26 @@
         NSLog(@"iname: %@", name);
     }
     return tmp;
+}
+
+- (void)gotoShare {
+    if (![WXApi registerApp:@"wx75115e72c42fcd99"]) {
+        NSLog(@"share error");
+        return;
+    }
+    WXMediaMessage *msg = [WXMediaMessage message];
+    msg.title = @"title";
+    
+    WXImageObject *imgObj = [WXImageObject object];
+    imgObj.imageData = [UIImage imageNamed:@"背景12-small.jpg"].imageDataRepresentation;
+    msg.mediaObject = imgObj;
+    [msg setThumbImage:[UIImage imageNamed:@"上一首"]];
+    SendMessageToWXReq *req = [SendMessageToWXReq new];
+    req.bText = NO;
+    req.message = msg;
+    req.text = @"this is share";
+    req.scene = 0;
+    [WXApi sendReq:req];
 }
 
 @end

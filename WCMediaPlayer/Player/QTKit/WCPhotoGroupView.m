@@ -529,8 +529,8 @@
         [cell scrollToTopAnimated:NO];
     }
     [UIView animateWithDuration:animated ? 0.2 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
-        _pager.alpha = 0.0;
-        _blurBackground.alpha = 0.0;
+        self->_pager.alpha = 0.0;
+        self->_blurBackground.alpha = 0.0;
         if (isFromImageClipped) {
             
             CGRect fromFrame = [fromView convertRect:fromView.bounds toView:cell];
@@ -598,7 +598,7 @@
     intPage = intPage < 0 ? 0 : intPage >= _groupItems.count ? (int)_groupItems.count - 1 : intPage;
     _pager.currentPage = intPage;
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
-        _pager.alpha = 1;
+        self->_pager.alpha = 1;
     }completion:^(BOOL finish) {
     }];
 }
@@ -616,7 +616,7 @@
 
 - (void)hidePager {
     [UIView animateWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut animations:^{
-        _pager.alpha = 0;
+        self->_pager.alpha = 0;
     }completion:^(BOOL finish) {
     }];
 }

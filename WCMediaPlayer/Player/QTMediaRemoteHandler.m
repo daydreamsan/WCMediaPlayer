@@ -73,8 +73,14 @@
         [center.playCommand setEnabled:YES];
         [center.playCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent *event) {
             __strong typeof(ws_) sf_ = ws_;
-            [sf_.player pause];
-            return MPRemoteCommandHandlerStatusSuccess;
+            MPRemoteCommandHandlerStatus status;
+            if (sf_.player.state == QTMediaPlayerStatePaused) {
+                [sf_.player pause];
+                status = MPRemoteCommandHandlerStatusSuccess;
+            } else {
+                status = MPRemoteCommandHandlerStatusCommandFailed;
+            }
+            return status;
         }];
     }
     if (self.options & QTHandlePause) {
