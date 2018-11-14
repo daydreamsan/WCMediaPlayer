@@ -70,8 +70,10 @@
 - (void)play {
     if (self.privPlayer.currentPlaylistItem) {
         if (!self.privPlayer.isPlaying) {
-            [self configAudioSession];
-            [self.privPlayer play];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self configAudioSession];
+                [self.privPlayer play];
+            });
         }
     } else {
         [self playWithIndex:0];
@@ -97,23 +99,30 @@
     if (self.onUpdateIndex) {
         self.onUpdateIndex(self, oldIndex, self.currentIndex);
     }
-    [self configAudioSession];
-    [self.privPlayer play];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self configAudioSession];
+        [self.privPlayer play];
+    });
 }
+
 - (void)playWithIndexObj:(NSNumber *)idx {
     NSUInteger index = idx.integerValue;
     [self playWithIndex:index];
 }
 
 - (void)pause {
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
-    [self.privPlayer pause];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
+        [self.privPlayer pause];
+    });
 }
 
 - (void)stop {
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
-    [self.privPlayer stop];
-    [self invalidTimer];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playNextItem) object:nil];
+        [self.privPlayer stop];
+        [self invalidTimer];
+    });
 }
 
 - (BOOL)hasNextItem {
@@ -316,6 +325,7 @@
 - (void)setupObserver {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveEnterBackgroundNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveRouteChangeNotification:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
 }
 
 #pragma mark - Action
@@ -350,13 +360,25 @@
     }
 }
 
+- (void)didReceiveRouteChangeNotification:(NSNotification *)noti {
+    NSDictionary *info = noti.userInfo;
+    AVAudioSessionRouteChangeReason reason = [info[AVAudioSessionRouteChangeReasonKey] integerValue];
+    if (AVAudioSessionRouteChangeReasonOldDeviceUnavailable == reason) {
+        AVAudioSessionRouteDescription *previousRoute = info[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *previousOutput = previousRoute.outputs.firstObject;
+        if ([previousOutput.portType isEqualToString:AVAudioSessionPortHeadphones]) {
+            [self pause];
+        }
+    }
+}
+
 - (void)configAudioSession {
     if (self.autoHandleAudioSession) {
         AVAudioSession *session = [AVAudioSession sharedInstance];
         NSError *error;
-        BOOL success = [session setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
+        BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
         if (!error && success) {
-            success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
+            success = [session setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
             if (!error && success) {
                 
             } else {

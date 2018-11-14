@@ -78,7 +78,7 @@ typedef void(^QTMetaDataAvailableCallback)(QTMediaPlayer *player, NSDictionary *
  支持后台播放
  支持远程控制
  支持边播边下
- 时间回调精度为1/60s
+ 时间回调精度为1s/60
  自动处理AVSession
  */
 @interface QTMediaPlayer : NSObject<QTPlayerInterface>

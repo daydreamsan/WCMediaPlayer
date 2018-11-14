@@ -22,6 +22,7 @@
 #import "WCPhotoGroupView.h"
 #import <WechatAuthSDK.h>
 #import <WXApi.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController ()
 
@@ -207,16 +208,10 @@
 - (void)prepareSongs {
     NSMutableArray *songsM = @[].mutableCopy;
     NSMutableArray *bgs = @[].mutableCopy;
-    for (NSInteger i = 0; i < 12; i++) {
+    for (NSInteger i = 0; i < 21; i++) {
         NSString *bg = [NSString stringWithFormat:@"背景%ld.jpg", i%10];
         NSString *name = [NSString stringWithFormat:@"%02ld.mp3", (long)i];
-        if (i == 10) {
-            name = [NSString stringWithFormat:@"%02ld.m4a", (long)i];
-        } else if (i == 11) {
-            name = [NSString stringWithFormat:@"%02ld.aac", (long)i];
-        } else {
-            name = [NSString stringWithFormat:@"%02ld.mp3", (long)i];
-        }
+        name = [NSString stringWithFormat:@"%02ld.mp3", (long)i];
         name = [@"http://192.168.1.155:8888/Resource/" stringByAppendingString:name];
         [bgs addObject:bg];
         

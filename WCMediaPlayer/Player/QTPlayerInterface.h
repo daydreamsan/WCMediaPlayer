@@ -36,7 +36,6 @@ typedef NS_ENUM(NSInteger, QTMediaPlayerState) {
 
 @protocol QTPlayerInterface <NSObject>
 
-@property (nonatomic, assign, readonly) QTMediaPlayerState state;
 - (void)play;
 - (void)pause;
 - (void)stop;
@@ -44,5 +43,6 @@ typedef NS_ENUM(NSInteger, QTMediaPlayerState) {
 - (void)playPreviousItem;
 - (void)seekToPosition:(QTMediaPosition)position;
 - (BOOL)isPlaying;
+- (QTMediaPlayerState)state;
 
 @end
