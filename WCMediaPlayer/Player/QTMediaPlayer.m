@@ -234,11 +234,21 @@
         .position = p.position
     };
 }
+- (void)setCacheEnable:(BOOL)cacheEnable {
+    _cacheEnable = cacheEnable;
+    self.privPlayer.configuration.cacheEnabled = cacheEnable;
+}
+- (void)setMaxCacheSize:(int)maxCacheSize {
+    _maxCacheSize = maxCacheSize;
+    self.privPlayer.configuration.maxDiskCacheSize = maxCacheSize;
+}
 
 #pragma mark - Private
 - (void)setupPrivPlayer {
     self.privPlayer = FSAudioController.new;
     self.privPlayer.automaticAudioSessionHandlingEnabled = NO;
+    self.privPlayer.configuration.maxDiskCacheSize = 128000000L;
+    
     __weak typeof(self) ws_ = self;
     self.privPlayer.onMetaDataAvailable = ^(NSDictionary *metadata) {
         __strong typeof(ws_) sf_ = ws_;

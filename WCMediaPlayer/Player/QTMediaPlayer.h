@@ -150,6 +150,16 @@ typedef void(^QTMetaDataAvailableCallback)(QTMediaPlayer *player, NSDictionary *
 @property (nonatomic, assign) BOOL autoSkipBadMediaItem;
 
 /**
+ 是否开启自动缓存, 默认为开启
+ */
+@property (nonatomic, assign) BOOL cacheEnable;
+
+/**
+ 最大缓存. 默认为128000000(128M)
+ */
+@property (nonatomic, assign) int maxCacheSize;
+
+/**
  播放列表, 外部不应直接修改该字段以及其中的元素
  */
 @property (nonatomic, strong, readonly) NSArray<QTMediaItem *> *playlist;

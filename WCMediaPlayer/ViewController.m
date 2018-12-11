@@ -208,17 +208,30 @@
 - (void)prepareSongs {
     NSMutableArray *songsM = @[].mutableCopy;
     NSMutableArray *bgs = @[].mutableCopy;
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+    path = [path stringByAppendingPathComponent:@"cn.qtplayer"];
+    BOOL isdir = NO;
+    BOOL exist = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isdir];
+    if (exist && !isdir) {
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    } else if (exist && isdir) {
+        
+    } else if (!exist) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
     for (NSInteger i = 0; i < 21; i++) {
         NSString *bg = [NSString stringWithFormat:@"背景%ld.jpg", i%10];
         NSString *name = [NSString stringWithFormat:@"%02ld.mp3", (long)i];
-        name = [NSString stringWithFormat:@"%02ld.mp3", (long)i];
-        name = [@"http://192.168.1.155:8888/Resource/" stringByAppendingString:name];
+        NSString * urlname = [@"http://192.168.1.155:8888/Resource/" stringByAppendingString:name];
         [bgs addObject:bg];
         
         QTMediaItem *item = QTMediaItem.new;
         item.name = @(i).stringValue;
-        item.URL = [NSURL URLWithString:name];
+        item.URL = [NSURL URLWithString:urlname];
         item.start = 0;
+        NSString *pathurl = [path stringByAppendingPathComponent:name];
+        item.outputFileURL = [NSURL fileURLWithPath:pathurl];
         [songsM addObject:item];
     }
     self.songs = songsM;
@@ -230,6 +243,7 @@
     self.stream.autoUpdateProgress = YES;
     self.stream.autoHandleAudioSession = YES;
     self.stream.autoSkipBadMediaItem = YES;
+    self.stream.cacheEnable = NO;
     __weak typeof(self) self_ = self;
     self.stream.onChangeState = ^(QTMediaPlayer *player, QTMediaPlayerState oldState, QTMediaPlayerState freshState) {
         __strong typeof(self_) strongself = self_;
